@@ -1,12 +1,13 @@
 server:
-  port: 8888
+  port: 8888  # Config service will run on port 8888
 
 spring:
   application:
-    name: config-service
+    name: config-service  # Name of your Spring Cloud Config server
+
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/devloperHicham/config-data.git
-          default-label: main
+          uri: https://github.com/devloperHicham/config-data.git  # Git repository URL for configuration files
+          default-label: main  # Use the 'main' branch for fetching configurations
