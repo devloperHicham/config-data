@@ -1,1 +1,19 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: operation-service
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/operation_db
+      database: operation_db
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
 
