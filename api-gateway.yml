@@ -9,22 +9,22 @@ spring:
     gateway:
       routes:
         - id: auth-service
-          uri: lb://AUTH-SERVICE
+          uri: lb://auth-service
           predicates:
             - Path=/api/auth/**
 
         - id: user-service
-          uri: lb://USER-SERVICE
+          uri: lb://user-service
           predicates:
             - Path=/api/users/**
 
         - id: operation-service
-          uri: lb://OPERATION-SERVICE
+          uri: lb://operation-service
           predicates:
             - Path=/api/operations/**
 
         - id: setting-service
-          uri: lb://SETTING-SERVICE
+          uri: lb://setting-service
           predicates:
             - Path=/api/settings/**
 
