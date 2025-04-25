@@ -7,7 +7,7 @@ spring:
 
   data:
     mongodb:
-      uri: ${MONGODB_URI:mongodb://localhost:27017/operation_db}
+      uri: ${MONGODB_URI:mongodb://mongo:27017/operation_db}
       database: operation_db
 
 eureka:
@@ -15,5 +15,5 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka-server:8761/eureka/
 
