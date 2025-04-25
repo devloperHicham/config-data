@@ -7,7 +7,7 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://localhost:27017/operation_db
+      uri: ${MONGODB_URI:mongodb://localhost:27017/operation_db}
       database: operation_db
 
 eureka:

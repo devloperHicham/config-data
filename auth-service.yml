@@ -7,7 +7,7 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://localhost:27017/auth_db
+      uri: ${MONGODB_URI:mongodb://localhost:27017/auth_db}
       database: auth_db
 
 eureka:
