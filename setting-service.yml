@@ -5,10 +5,17 @@ spring:
   application:
     name: setting-service
 
-  data:
-    mongodb:
-      uri: ${MONGODB_URI:mongodb://mongo:27017/setting_db}
-      database: setting_db
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # (good for dev, for prod you will use validate or none later)
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 eureka:
   client:

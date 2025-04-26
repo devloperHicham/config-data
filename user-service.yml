@@ -5,10 +5,17 @@ spring:
   application:
     name: user-service
 
-  data:
-    mongodb:
-      uri: ${MONGODB_URI:mongodb://mongo:27017/user_db}
-      database: user_db
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # (good for dev, for prod you will use validate or none later)
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 eureka:
   client:
@@ -16,4 +23,3 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://discovery-service:8761/eureka/
-
