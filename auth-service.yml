@@ -1,12 +1,12 @@
 server:
-  port: 8081
+  port: 8081  # Port where the auth service will run
 
 spring:
   application:
-    name: auth-service
+    name: auth-service  # Service name
 
   datasource:
-    url: jdbc:postgresql://postgres-auth:5432/auth_db
+    url: jdbc:postgresql://postgres-auth:5433/auth_db  # PostgreSQL URL for auth service
     username: auth_user
     password: auth_password
     driver-class-name: org.postgresql.Driver
@@ -15,11 +15,11 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-    open-in-view: false  # (Best practice: safer to disable open session in view)
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 eureka:
   client:
-    register-with-eureka: true
+    register-with-eureka: true  # Register the auth service with Eureka
     fetch-registry: true
     service-url:
-      defaultZone: http://discovery-service:8761/eureka/
+      defaultZone: http://discovery-service:8761/eureka/  # Eureka server URI
