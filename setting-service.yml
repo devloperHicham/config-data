@@ -7,8 +7,8 @@ spring:
 
   datasource:
     url: jdbc:postgresql://postgres-setting:5435/setting_db
-    username: setting_user
-    password: setting_password
+    username: ${POSTGRES_SETTING_USER}
+    password: ${POSTGRES_SETTING_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
