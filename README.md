@@ -1,2 +1,2 @@
 # config-data
-will hold only .yml files  yes 
+will hold only .yml files 
