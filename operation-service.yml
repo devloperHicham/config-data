@@ -1,14 +1,14 @@
 server:
-  port: ${OPERATION_SERVICE_PORT}
+  port: 8083
 
 spring:
   application:
     name: operation-service
 
   datasource:
-    url: jdbc:postgresql://${POSTGRES_OPERATION_HOST}:${POSTGRES_OPERATION_PORT}/${POSTGRES_OPERATION_DB}
-    username: ${POSTGRES_OPERATION_USER}
-    password: ${POSTGRES_OPERATION_PASSWORD}
+    url: jdbc:postgresql://postgres-operation:5432/operation_db
+    username: operation_db
+    password: operation_password
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -22,5 +22,4 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://discovery-service:${DISCOVERY_PORT}/eureka/
-
+      defaultZone: http://discovery-service:8761/eureka/
