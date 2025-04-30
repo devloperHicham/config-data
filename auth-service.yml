@@ -19,7 +19,7 @@ spring:
 
 eureka:
   client:
-    register-with-eureka: true  # Register the auth service with Eureka
+    register-with-eureka: true  # Register the auth service with Eurekagg
     fetch-registry: true
     service-url:
       defaultZone: http://discovery-service:${DISCOVERY_PORT}/eureka/ # Eureka server URI
