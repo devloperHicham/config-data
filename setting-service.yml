@@ -6,7 +6,7 @@ spring:
     name: setting-service
 
   datasource:
-    url: jdbc:postgresql://postgres-setting:5435/setting_db
+    url: jdbc:postgresql://postgres-setting:5432/setting_db
     username: setting_db
     password: setting_password
     driver-class-name: org.postgresql.Driver
