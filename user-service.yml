@@ -1,12 +1,12 @@
 server:
-  port: 8082
+  port: 8082  # Port where the user service will run
 
 spring:
   application:
-    name: user-service
+    name: user-service  # Service name
 
   datasource:
-    url: jdbc:postgresql://postgres-user:5432/user_db
+    url: jdbc:postgresql://postgres-user:5432/user_db  # PostgreSQL URL for user service
     username: user_db
     password: user_password
     driver-class-name: org.postgresql.Driver
@@ -19,7 +19,7 @@ spring:
 
 eureka:
   client:
-    register-with-eureka: true
+    register-with-eureka: true  # Register the user service with Eureka
     fetch-registry: true
     service-url:
-      defaultZone: http://discovery-service:8761/eureka/
+      defaultZone: http://discovery-service:8761/eureka/  # Eureka server URI
