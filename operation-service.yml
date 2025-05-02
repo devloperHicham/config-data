@@ -8,7 +8,7 @@ spring:
   datasource:
     url: jdbc:postgresql://postgres-operation:5432/operation_db
     username: operation_db
-    password: operation_password
+    password: operation_password12345@@
     driver-class-name: org.postgresql.Driver
 
   jpa:
