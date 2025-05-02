@@ -6,9 +6,9 @@ spring:
     name: auth-service  # Service name
 
   datasource:
-    url: jdbc:postgresql://postgres-auth:5432/auth_db  # PostgreSQL URL for auth service
-    username: auth_db
-    password: auth_password
+    url: jdbc:postgresql://postgres-auth:5432/user_db  # PostgreSQL URL for auth service
+    username: user_db
+    password: user_password
     driver-class-name: org.postgresql.Driver
 
   jpa:
